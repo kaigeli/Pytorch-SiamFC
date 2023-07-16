@@ -23,7 +23,8 @@ def get_sequence(seq_num, imagenet_dir, set_type='train'):
     valid_frame = []
 
     for frame in sorted(os.listdir(sequence_path)):
-        frame_path = join(dir_annot, sequence_path, frame)
+        #frame_path = join(dir_annot, sequence_path, frame)
+        frame_path = join(sequence_path, frame)
         # Get the relative path to the sequence form the annotations directory
         if set_type == 'val':
             sequence_rel_path = basename(sequence_path)
